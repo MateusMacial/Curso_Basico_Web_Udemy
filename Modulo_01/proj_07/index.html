@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateus">
+    <meta name="descripition" content="pratica com tabelas e listas dentro de listas.">
+    <meta name="keywords" content="html, css, listas. tabelas"> 
+    <title>Listas dentro de listas e tabelas</title>
+
+    <style>
+        ul{
+            font-size: 20px;
+            list-style: square;
+        }
+        li ul{
+            list-style: upper-roman;
+            height: 0;
+            overflow: hidden;
+            transition: height .5s;
+        }
+        li:hover{
+            background-color: #ccc;
+        }
+        li:hover ul{
+            height: 50px;
+        }
+
+        table{
+            font-family: sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+            background: beige;
+        }
+        td{
+            border: 2px solid black;
+            text-align: center;
+        }
+        th{
+            background: rgb(189, 81, 81);
+            border: 2px solid black;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <ul>
+            <li>menu
+                <ul>
+                    <li>principal</li>
+                    <li>secundario</li>
+                </ul>
+            </li>
+
+            <li>fale conosco</li>
+
+            <li>preços</li>
+
+        </ul>
+    </div>
+
+    <table>
+        <caption>Tabela de preços de cursos</caption>
+
+        <thead>
+            <tr><!--Linha-->
+                <th>Área</th><!--Campo 1-->
+                <th>Curso</th><!--Campo 2-->
+                <th>Investimento</th><!--Campo 3-->
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">Valores sujeitos a alterações sem previo aviso.</td><!-- colspan é para fazer com que a linha englobase por mais de uma, nesse caso.-->
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <tr>
+                <td rowspan="3">Designe</td><!--Campo 1 Nesse caso foi usado rowspan para fazer com que a coluna englobase mais de uma nesse caso 3.-->
+                <td>InDesigne</td><!--Campo 2-->
+                <td>R$ 1.000,00</td><!--Campo 3-->
+            </tr>
+
+            <tr>
+                
+                <td>Photoshop</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>Illustrator</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">Development</td><!--Nesse caso foi usado rowspan para fazer com que a coluna englobase mais de uma nesse caso 4.-->
+                <td>HTML</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>CSS</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>Javascript</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>PHP</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    
+</body>
+</html>

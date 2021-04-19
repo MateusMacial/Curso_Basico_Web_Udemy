@@ -1,0 +1,17 @@
+body{
+    font: 100% sans-serif;
+}
+h1{
+    text-align: center;
+}
+div{
+    border: 1px solid black;
+    padding: 1em;
+    width: 320px;
+    margin: 6.25em auto;
+}
+p{
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1.25em;
+}

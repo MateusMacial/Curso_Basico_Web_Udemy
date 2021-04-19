@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica</title>
+
+    <style>
+
+        a[target="_blank"]:after{
+            content: url(imagens/icon.png);
+            display: inline-block;
+            padding-left: 10px;
+        }
+        a[href$=".pdf"]::before{
+            content: url(imagens/Crystal_Clear_mimetype_pdf.png);
+
+        }
+        .ok{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 2px solid black;
+            background: #ccc;
+        }
+        label{
+            display: inline-block;
+            font-family: 'Lucida Sans';
+            font-size: 20px;
+            height: 15px;
+        }
+        input[type="checkbox"]{
+            width: 1px;
+            height: 1px;
+            margin: 0;
+            visibility: hidden;
+            display: inline-block;
+            overflow: hidden;
+        }
+        input[type="checkbox"]:checked + label .ok{ /*Para pegar o "input" que tem um "type=checkbox" quando ele estiver checado e editar a "label" que esta imediatamente após( para isso se usa o sinal de "+") o "input" dentro dela editar o "span" que tem a classe "ok".*/
+            background: rgb(151, 144, 144);
+            position: relative;
+        }
+        input[type="checkbox"]:checked + label .ok::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 4px;
+            bottom: 4px;
+            left: 4px;
+            border: 2px solid black;
+            border-top-color: transparent;
+            border-left: transparent;
+            transform: rotate(45deg);
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Testes</h1>
+    
+    <a href="http://google.com" target="_blank">Link externo</a>
+    <br>
+    <a href="qq.pdf">Arquivo PDF</a>
+    <br>
+    <br>
+    <hr>
+    <input type="checkbox" name="ok" id="ok">
+    <label for="ok"><span class="ok"></span> OK aceito</label>
+</body>
+</html>

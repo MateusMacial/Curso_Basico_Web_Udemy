@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+
+    <style>
+        article:nth-child(1) a{ /*Seleciona toda tag "a" que é descendente  do 1 article*/
+            color: red;
+        }
+        article:nth-child(3) > p{ /*Seleciona toda tag "p" que é filho direto do article*/
+            color: orange;
+        }
+        article:nth-child(5) h3 + p{ /*Seleciona a tag "p" que esta apos o "h3"*/
+            color: red;
+        }
+        article:nth-child(7) h3 ~ p{ /*Seleciona toda tag "p" que esta apos o "h3"*/
+            color: green;
+        }
+        .destaque{
+            background-color: yellow;
+        }
+        article:not(.destaque){
+            font-family: Arial, Helvetica, sans-serif;
+            color: blue;
+        }
+        a[href="#"]{ /*Seleciona toda tag "a" que tem o atributo "href" com o valor especificado no caso "#" */
+            opacity: .2;
+        }
+        a[href^="http"]{ /*Seleciona toda tag "a" que tem o atributo "href" com o valor INICIAL especificado no caso "http" */
+            color: red;
+        }
+        a[href$="html"]{ /*Seleciona toda tag "a" que tem o atributo "href" com o valor FINAL especificado no caso "html" */
+           border: 2px solid blue;
+        }
+        a[title]{/*Seleciona a tag "a" com atributo "title"*/
+            font-size: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <article>
+        <h3>
+            titulo
+        </h3>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>
+            titulo
+        </h3>
+        <p>paragrafo<a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+    </article>
+    
+    <hr>
+
+    <article>
+        <h3>
+            titulo
+        </h3>
+        <p>paragrafo<a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>
+            titulo
+        </h3>
+        <p>paragrafo<a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <hr>
+
+    <article class="destaque">
+        <h3>
+            titulo
+        </h3>
+        <p>paragrafo<a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <hr>
+
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="http//serfrontend.com" target="_blank">link externo</a></li>
+        <li><a href="index.html" title="externo">link interno</a></li>
+    </ul>
+
+</body>
+</html>

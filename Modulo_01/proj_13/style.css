@@ -1,0 +1,13 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+
+    transition-property: width;
+    transition-delay: .5s;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(1.5,5,5,5);
+}
+div:hover{
+    width: 800px;
+}

@@ -1,0 +1,170 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Mateus">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            .flexbox{
+                height: 250px;
+                border: 1px solid red;
+                display: flex;
+                margin-bottom: 20px;
+            }
+            
+            .flexbox div{
+                background: orange;
+                width: 300px;
+                margin: 15px;
+            }
+
+            .flexbox:nth-child(4){
+                /*flex-direction: row;
+                flex-wrap: wrap;*/
+                flex-flow: row wrap;
+            }
+
+            .flexbox:nth-child(5){
+                justify-content: space-between;
+            }
+
+            .flexbox:nth-child(5) div{
+                width: 20px;
+            }
+            
+            .flexbox:nth-child(6) div{
+                width: 20px;
+            }
+            
+            .flexbox:nth-child(6){
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flexbox:nth-child(7) div{
+                width: 40px;
+            }
+            
+            .flexbox:nth-child(7){
+                justify-content: center;
+                align-items: baseline;
+            }
+
+            .flexbox:nth-child(8) div{
+                width: 70px;
+            }
+            
+            .flexbox:nth-child(8){
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: flex-end;
+            }
+
+            .flexbox:nth-child(9) div{
+                width: 100px;
+                background: blue;
+            }
+
+            .flexbox:nth-child(9) div:nth-child(2){
+                flex-grow: 2;
+            }
+
+            .flexbox:nth-child(9) div:nth-child(4){
+                flex-grow: 1;
+            }
+
+            .flexbox:nth-child(10) div{
+                background: blue;
+            }
+
+            .flexbox:nth-child(10) div:nth-child(2){
+                flex-shrink: 3;
+            }
+
+            .flexbox:nth-child(11) div:nth-child(2){
+                order: 1;
+            }
+            .flexbox:nth-child(12){
+                align-items: flex-start;
+            }
+            .flexbox:nth-child(12) div:nth-child(2){
+                align-items: flex-start;
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Display Flex</h2>
+        <p>Acomodar ou distribuir elementos de modo fácil</p>
+        <p>Ajuda a centralizar na vertical</p>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2" style="font-size: 4em;">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        <div class="flexbox">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        
+    </body>
+</html>

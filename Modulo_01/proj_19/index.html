@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+
+    <style>
+
+        .div1{
+            width: 150px;
+            height: 150px;
+            background: red;
+            transform: translate(10px, 10px) skew(5deg, 12deg);
+        }
+        .div2 p{
+            transform: rotate(10deg);
+            transform-origin: left;
+            transition: 3s;
+        }
+        .div2 p:hover{
+            transform: rotate(0deg);
+        }
+        .div3{
+            width: 150px;
+            height: 150px;
+            background: red;
+            transform: translate(50px, 150px) scale(1.2, 1.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="div1">div1</div>
+    <div class="div2"><p>texto Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quia eum architecto ratione officia placeat ea tempora quae, quibusdam aut similique debitis vel dolore vitae, sapiente at rerum consectetur minima.</p></div>
+    <div class="div3">div3</div>
+    
+</body>
+</html>

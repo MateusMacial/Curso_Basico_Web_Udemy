@@ -1,0 +1,10 @@
+body{
+    font-family:'Lucida Sans';
+    font-size: 16px;
+}
+
+a::after{
+    content: attr(href);
+    display: inline-block;
+    margin: 0px 10px;
+}

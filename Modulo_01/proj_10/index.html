@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <h1>Exemplo de formulario</h1>
+
+    <form action="#" method="POST" class="form_login">
+
+        <fieldset>
+            <legend>Dados pessoais</legend>
+
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Número de filhos</label>
+            <input type="number" min="0" max="1000">
+
+            <label>Data de nascimento</label>
+            <input type="date" min="2018-01-30" max="2138-01-30">
+
+            <p>Sexo:</p>
+            
+            <label>
+            <input type="radio" name="sexo" value="M">
+            Masculino</label> 
+
+            <label>
+            <input type="radio" name="sexo" value="F">
+            Feminino</label>
+
+            <label>Estado</label>
+            <select name="Estado">
+                <option value="0">Selecione</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="PR">Paraná</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Área de interesse</legend>
+
+            <label><input type="checkbox" name="html" value="html">HTML</label>
+            <label><input type="checkbox" name="css" value="css">CSS</label>
+            <label><input type="checkbox" name="javascript" value="javascript">Javascript</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Menssagem</legend>
+
+            <textarea style="resize: none;" name="msg" id="" cols="30" rows="10"></textarea>
+
+            <textarea style="resize: none;" name="contrato" id="" cols="30" rows="10"  readonly>Aqui fica o contrato.</textarea>
+            <label><input type="checkbox">Li e aceito</label>
+
+        </fieldset>
+
+            <input type="submit" value="Mandar">
+            <input type="button" value="button">
+            <input type="reset" value="reset">
+
+        
+    </form>
+    
+</body>
+</html>

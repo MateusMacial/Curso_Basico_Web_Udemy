@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content</title>
+
+    <style>
+        div{
+            border: 2px solid red;
+            padding: 25px;
+            position: relative;
+            
+        }
+        div:before{
+            content: "before: ";
+            background-color: #ccc;
+        }
+        div::after{
+            content: "";
+            background:red;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .destaque{
+            margin-top: 20px;
+            border: 2px solid red;
+            position: relative;
+        }
+        .destaque h3{
+            border: 2px solid red;
+            display: inline-block;
+            position: absolute;
+            margin-top: 0;
+        }
+        .destaque p{
+            margin-top: 50px;
+            border: 2px solid red;
+            width: 20%;
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        .ul{
+            border: 2px solid black;
+        }
+    </style> 
+</head>
+<body>
+
+    <div>Texto principal da div</div>
+
+    <article class="destaque">
+        <h3>
+            titulo
+        </h3>
+        <p>paragrafo<a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <hr>
+
+    <ul class="ul">
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="http//serfrontend.com" target="_blank">link externo</a></li>
+        <li><a href="index.html" title="externo">link interno</a></li>
+    </ul>
+    
+</body>
+</html>

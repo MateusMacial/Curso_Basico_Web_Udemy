@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Checkbox</title>
+
+    <style>
+        label span{
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            display: inline-block;
+            border-radius: 15px;
+        }
+        label span::after{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: rgb(126, 126, 126);
+            position: absolute;
+            display: block;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-radius: 10px;
+            transition: all .5s ease-in-out;
+        }
+        label input:checked + span::after{
+            transform: translateX(30px);
+            background: rgb(0, 0, 0);
+        }
+        label input[type=checkbox]{
+            width: 1px;
+            opacity: 0;
+            margin: 0;
+        }
+        label{
+            font-family: Arial ;
+            font-size: 30px;
+        }
+        label input:focus + span{
+            box-shadow: 0 0 0 1px rgb(105, 105, 105);
+        }
+
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        <span></span>
+        Esporte
+    </label>
+
+    <label>
+        <input type="checkbox">
+        <span></span>
+        Politica    
+    </label>
+
+    <label>
+        <input type="checkbox">
+        <span></span>
+        Educação
+    </label>
+</body>
+</html>
