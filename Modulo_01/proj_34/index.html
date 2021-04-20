@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+
+    <style>
+
+        @keyframes slide{
+            0%, 22%{
+                transform: translateY(0);
+            }
+            25%, 47%{
+                transform: translateY(-50vh);
+            }
+            50%, 72%{
+                transform: translateY(-100vh);
+            }
+            75%, 97%{
+                transform: translateY(-150vh);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+
+        body{
+            font-family: sans-serif;
+            color: white;
+            background: rgb(83, 81, 81);
+            margin: 0;
+        }
+        .slide-externo{
+            width: 80vw;
+            height: 50vh;
+            border: 10px solid white;
+            box-shadow: 0 0 10px black;
+            margin-left: 10vw;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+         .slide-interno{
+             width: 100%;
+             animation: slide 10s infinite cubic-bezier(0,-0.36,1,1.47);
+         }
+         .slide-interno img{
+             display: block;
+             height: 50vh;
+             width: 100%;
+         }
+    </style>
+</head>
+<body>
+    <h2>animation - slideshow</h2>
+
+    <div class="slide-externo">
+        <div class="slide-interno">
+            <img src="images/slide1.jpg" alt="imagem-01">
+            <img src="images/slide2.jpg" alt="imagem-02">
+            <img src="images/slide3.jpg" alt="imagem-03">
+            <img src="images/slide4.jpg" alt="imagem-04">
+        </div>
+    </div>
+    
+</body>
+</html>
