@@ -9,19 +9,37 @@
 <body>
 
     <button onclick="criarTabuada()">Criar Tabuada</button>
-    <button onclick="limpar()">Limpar</button>
+    <button onclick="limparTabuada()">Limpar</button>
 
-    <div id="saida"></div>
+    <div id="output"></div>
 
     <script>
        
         function criarTabuada(){
-            alert("Tabuada criada!");
+
+            var n = prompt("Digite um numero!");
+
+            limparTabuada();
+            
+            n = parseInt(n);
+            var i = 1;
+
+            while(i <= 10){
+                tabuada += n + "X" + i + "=" + (n * i) + "<br>";
+                i++; 
+            }
+
+            output.innerHTML = tabuada;
         }
 
-        var saida = document.querySelector("#saida");
-        var msg = "";
-        saida.innerHTML = msg;
+        function limparTabuada(){
+            tabuada = "";
+            output.innerHTML = tabuada;
+        }
+
+        var output = document.querySelector("#output");
+
+        var tabuada = "";
 
     </script> 
     
