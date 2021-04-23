@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <button onclick="mostrarAlert()">Mostrar no alert</button>
+    <button onclick="mostrarTela()">Mostras na tela</button>
+
+    <div class="output"></div>
+
+    <script>
+
+        largura = prompt("Digite a largura!");
+        largura = parseFloat(largura);
+        
+        altura = prompt("Digite a altura");
+        altura = parseFloat(altura);
+
+        function calcular(l, a){
+            return l * a;
+        }
+
+        function mostrarAlert(){
+            var area = calcular(largura, altura);
+
+            alert("A área é: " + area);
+        }
+
+        function mostrarTela(){
+            var area = calcular(largura, altura);
+
+            document.querySelector(".output").innerHTML = " A área é: " + area;
+        }
+
+    </script>
+    
+</body>
+</html>
