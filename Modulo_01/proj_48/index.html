@@ -21,17 +21,37 @@
         altura = parseFloat(altura);
 
         function calcular(l, a){
+
+            if(l === undefined || a === undefined){
+                throw new Error("Presisa de parametros");
+            }
+
+            if(isNaN(l) || isNaN(a)){
+                throw new Error("Digite apenas números!");
+            }
+
             return l * a;
         }
 
         function mostrarAlert(){
-            var area = calcular(largura, altura);
+
+            try{
+                var area = calcular(largura, altura);
+            }catch(e){
+                area = e;
+            }
 
             alert("A área é: " + area);
+            
         }
 
         function mostrarTela(){
-            var area = calcular(largura, altura);
+
+            try{
+                var area = calcular(largura, altura);
+            }catch(e){
+                area = e;
+            }
 
             document.querySelector(".output").innerHTML = " A área é: " + area;
         }
