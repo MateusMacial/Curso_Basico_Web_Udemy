@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array\Objetos</title>
+</head>
+<body>
+    <div id="output"></div>
+    
+
+    <script>
+        var user = [
+            {"nome":"mateus", "email":"mateus_macial@gmail.com"}, 
+            {"nome":"joao", "email":"Joao@gmail.com"},
+            {"nome":"miguel", "email":"mig@el.com"}
+        ]
+
+        var msg = "";
+
+        msg += "<h1>Nome: "+ user[0].nome +"</h1>";
+        msg += "<p>E-mail: "+ user[0].email +"</p>";
+        msg += "<h1>Nome: "+ user[1].nome +"</h1>";
+        msg += "<p>E-mail: "+ user[1].email +"</p>";
+        msg += "<h1>Nome: "+ user[2].nome +"</h1>";
+        msg += "<p>E-mail: "+ user[2].email +"</p>";
+
+        document.querySelector("#output").innerHTML = msg;
+    </script>
+    
+</body>
+</html>
