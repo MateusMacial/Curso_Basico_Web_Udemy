@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Header</h1>
+    <p class="paragrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ipsa neque totam non adipisci ipsam reprehenderit placeat labore, cumque eaque deserunt fuga explicabo vel ratione ut corrupti dicta rem iure!</p>
+    <p class="paragrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ipsa neque totam non adipisci ipsam reprehenderit placeat labore, cumque eaque deserunt fuga explicabo vel ratione ut corrupti dicta rem iure!</p>
+    <p class="paragrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ipsa neque totam non adipisci ipsam reprehenderit placeat labore, cumque eaque deserunt fuga explicabo vel ratione ut corrupti dicta rem iure!</p>
+
+    <script>
+        (function(){
+            "use strict"
+
+            var paragrafOriginal = document.querySelectorAll(".paragrafo");
+            var x = 0;
+
+            while(paragrafOriginal[x]){
+                
+                paragrafOriginal[x].textContent = "oi, seu site foi hakeado"
+
+                x++;
+            }
+            
+
+        })()
+    </script>
+    
+    
+    
+</body>
+</html>
