@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario</h1>
+
+        <form action="">
+            <label for="txtUser">Usuario</label>
+            <input type="text" id="txtUser" name="user">
+
+            <label for="txtPass">Senha</label>
+            <input type="password" name="pass" id="txtPass">
+
+            <button type="button" id="btn">Logar</button>
+        </form>
+    </div>
+
+    <script>
+        (function(){
+            "user strict";
+            var $txtUser = document.getElementById("txtUser");
+            var $txtPass = document.getElementById("txtPass");
+            var $btn = document.getElementById("btn");
+
+            $btn.addEventListener("click", function(){
+
+                if(!$txtUser.value || ! $txtPass.value){
+                    alert("Preencher todos  os campos!");
+                }
+            });
+
+        })();
+    </script> 
+    
+    
+</body>
+</html>
