@@ -10,28 +10,30 @@
     <div class="container">
         <h1>Formulario</h1>
 
-        <form action="">
+        <form action="#" method="POST">
             <label for="txtUser">Usuario</label>
             <input type="text" id="txtUser" name="user">
 
             <label for="txtPass">Senha</label>
             <input type="password" name="pass" id="txtPass">
 
-            <button type="button" id="btn">Logar</button>
+            <button type="submit" id="btn">Logar</button>
         </form>
     </div>
 
     <script>
         (function(){
             "user strict";
+            var $form = document.querySelector("form");
             var $txtUser = document.getElementById("txtUser");
             var $txtPass = document.getElementById("txtPass");
             var $btn = document.getElementById("btn");
 
-            $btn.addEventListener("click", function(){
+            $form.addEventListener("submit", function(e){
 
                 if(!$txtUser.value || ! $txtPass.value){
                     alert("Preencher todos  os campos!");
+                    e.preventDefault();
                 }
             });
 
