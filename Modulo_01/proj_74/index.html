@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Array</h1>
+
+    <script>
+        //array de forma não literal;
+        //var arr = new Array();
+        //array literal;
+        var arr = [1,20,3,4,5, "qwe12", 20, "12"];
+
+        //Verifica se todos retornam true para a condição;
+        var onlyNumbers = arr.every( function(element, /*index, object(opicional)*/){
+
+            return typeof element === "number";
+        });
+        //Verifica se ao menos um retorna true para a condição;
+        var atLastOne = arr.some(function(element){
+
+            return typeof element === "number";
+        });
+        //Aplica um filtro no array;
+        var numbers = arr.filter(function(element, index, arr){
+            return typeof element === "number";
+        });
+        //Faz loop no array;
+        arr.forEach(function(el, i, arr){
+
+            console.log("el=", el, "|", "i=", i, "|", "i - ", arr.toString());
+        });
+        //Encontrar indice do elemento e pode ser passado um parametro para iniciar a busca;
+        var positionStr1 = arr.indexOf("qwe12", 2);
+        //console.log(positionStr1);
+
+        var positionStr2 = arr.indexOf(20);
+        //console.log("positionStr2 = ", positionStr2);
+        //Busca o ultimo index
+        var positionStr3 = arr.lastIndexOf(20);
+        //console.log("positionStr3 =", positionStr3);
+
+        //Faz uma alteração em cada um dos elementos;
+        numbers = numbers.map(function(el, i, arr){
+            return el * i;
+        });
+        console.log(numbers);
+        //Concatena com outros valores, duas arrays por exemplo;
+        var arr2 = arr.concat(numbers);
+        console.log(arr2);
+        //Parecida com o toString porem você pode escolher como separar passando por parametro;
+        var str = arr2.join(" -- ");
+        console.log(str);
+        //Adicionar item no fim do array;
+        arr.push("new", "item");
+        console.log(arr);
+        //Deleta o ultimo item do array e devolto o item;
+        var lastItem = arr.pop();
+        console.log(lastItem);
+        //Remome o primeiro item e devolme o mesmo;
+        var firstItem = arr.shift();
+        console.log(firstItem);
+        //Adiciona um novo item inicio do array;
+        arr.unshift(true, false, "unshift");
+        console.log(arr);
+
+    </script>
+    
+</body>
+</html>

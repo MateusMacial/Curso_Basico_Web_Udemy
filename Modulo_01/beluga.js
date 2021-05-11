@@ -12,3 +12,11 @@ function calcularMedia() {
 
     return total.toFixed(2) / qtd;
 }
+
+function random(num){
+    var _num = num || 1;
+    var numRandom = Math.random();
+    numRandom = numRandom * _num;
+    numRandom = Math.floor(numRandom);
+    return numRandom;
+}

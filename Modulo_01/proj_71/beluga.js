@@ -10,5 +10,5 @@ function calcularMedia() {
         x++
     }
 
-    return total.toFixed(2) / qtd;
+    return (total / qtd).toFixed(2);
 }
