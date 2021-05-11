@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>desafio</h1>
+    <div id="paragraphs">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus corrupti incidunt nulla veniam? Sapiente ea explicabo neque totam accusamus porro consequuntur autem dicta, quia, accusantium ipsam quibusdam, iure blanditiis in.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum tenetur cum libero, veritatis similique nulla, molestiae soluta vero unde omnis dicta facere ipsam dolor consequatur id veniam? Odit, excepturi optio!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe delectus labore dolor praesentium, sed maxime voluptatem impedit porro quae voluptatibus facere iusto odit reiciendis non eum, ducimus numquam libero inventore.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus expedita tenetur ipsa ipsum, distinctio quas, laudantium quod facilis itaque quis non facere repudiandae, reiciendis similique eum delectus eveniet? Minima, veniam!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo obcaecati voluptatum quo alias repellendus? Consequuntur amet quasi veritatis ipsum obcaecati placeat quia tenetur excepturi temporibus impedit dolore cupiditate, in inventore.</p>
+    </div>
+    
+    <script>
+        (function(){
+            var $paragraphs = document.querySelectorAll("p");
+            var x = 0;
+
+            while($paragraphs[x]){
+                $paragraphs[x].innerHTML = formatText($paragraphs[x].innerHTML);
+
+                x++;
+            }
+
+
+            function formatText(text){
+
+                var maxCharacters = 200;
+
+                if(text.length <= maxCharacters){
+                    return texto;
+                }
+
+                var subText = text.slice(0, maxCharacters);
+                return subText + " ...";
+            }
+            
+            
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>JS metodos em string</h1>
+
+    <script>
+        var name = "Mateus Macial Ferreira";
+        var formattedName = formatName(name);
+
+        function formatName(name){
+            var lastSpacePosition = name.lastIndexOf(" ");
+            
+            if(lastSpacePosition <= 0){
+                return name;
+            }
+
+            var lastName = name.slice(lastSpacePosition + 1);
+            console.log(lastName);
+            var firstName = name.slice(0, lastSpacePosition);
+            console.log(firstName);
+
+            return lastName + ', ' + firstName;
+        }
+
+        console.log(formattedName);
+
+    </script>
+    
+</body>
+</html>
