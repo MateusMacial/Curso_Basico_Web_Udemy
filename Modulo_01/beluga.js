@@ -3,14 +3,13 @@ function calcularMedia() {
     var total = 0;
     var qtd = arguments.length;
     var x = 0;
-    var media = total / qtd;
     //while(arguments[x]){
     while (typeof arguments[x] === 'number') {
         total += arguments[x];
         x++
     }
 
-    return total.toFixed(2) / qtd;
+    return (total / qtd).toFixed(2);
 }
 
 function random(num){

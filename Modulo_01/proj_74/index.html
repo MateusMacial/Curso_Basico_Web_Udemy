@@ -67,6 +67,28 @@
         //Adiciona um novo item inicio do array;
         arr.unshift(true, false, "unshift");
         console.log(arr);
+        /*Um loop que roda o array e retorna um valor, no caso são passados 2 parametros previous e current, no exemplo está pegando o previous e somando com o current. Tambem pode se passar um valor fora da funcao que servira de valor inicial, é o valor que previous recebera na primeira passada;*/
+        var arrSum =  numbers.reduce(function(previous, current){
+            return previous + current;
+        }, 2);
+        console.log(numbers);
+        console.log(arrSum);
+        //Troca a ordem para da direita para esquerda, e pode ser usado com strings;
+        var reduceRight = ["1", "2", "3"].reduceRight(function(p, c){
+            return p + c;
+        });
+        console.log(reduceRight);
+        //Inverte os valores e dovolve a array invertida;
+        var arr3 = [10,20,30];
+        arr3.reverse();
+        console.log(arr);
+        /*A parir da posisao(nao o index) que é passado como primeiro parametro até o fim, ou até a posisao passada no segundo parametro;*/
+        console.log(arr2.slice(2,8));
+        /*Inclui ou exclui item do array, no primeiro parametro se passa a posisao de inicio, no segundo quando vai excluir(pode ser 0), e em seguida o que será adicionado. Retorna os item excluidos;*/
+        var arr4 = arr2.splice(2, 3, "lemon", "orange");
+        console.log(arr2);
+        console.log(arr4);
+
 
     </script>
     
