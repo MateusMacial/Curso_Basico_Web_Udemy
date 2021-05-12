@@ -93,10 +93,12 @@
 					var linhaAluno = trs[x];
 					var tds = linhaAluno.querySelectorAll("td");					
 					var notas = recuperarNumerosDeColunas(tds);
-					var hasZero = notas.some(function(nota){
+
+					/*var hasZero = notas.some(function(nota){
 						return nota === 0;
-					});
-					
+					});*/
+					//Arrow function;
+					var hasZero = notas.some( nota => nota === 0);
 					var message = hasZero ? "Reprovado(a)" : calcularMedia.apply(this, notas);
 					//Operador ternario
 					/*variavel = expressao ? bloco verdade : bloco mentira;*/

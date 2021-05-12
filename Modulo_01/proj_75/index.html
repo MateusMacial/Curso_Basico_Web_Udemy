@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Desafio</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, vel ea. Maiores, nemo eveniet dignissimos veritatis voluptate error eum. Facilis quos dolorum, architecto dolores mollitia accusamus autem ipsam odit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit minima, quos voluptatibus cumque, doloribus, aliquam sunt aperiam iure amet provident voluptatum a molestias quod. Molestiae repellat molestias commodi ipsum nulla?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, vel ea. Maiores, nemo eveniet dignissimos veritatis voluptate error eum. Facilis quos dolorum, architecto dolores mollitia accusamus autem ipsam odit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit minima, quos voluptatibus cumque, doloribus, aliquam sunt aperiam iure amet provident voluptatum a molestias quod. Molestiae repellat molestias commodi ipsum nulla?</p>
+    <p>Lorem ipsum dolor sit, amet.</p>
+
+    <script>
+        (function(){
+            "use strict"
+
+            var $paragraphs = document.querySelectorAll("p");
+            console.log($paragraphs);
+            var x = 0;
+            
+            while($paragraphs[x]){
+                $paragraphs[x].innerHTML = formatText($paragraphs[x].innerHTML);
+                x++;
+            }
+
+            function formatText(text){
+                var maxWords = 10;
+                var arrText = text.split(" ");
+                console.log(arrText);
+
+                if(arrText.length > maxWords){
+                    return arrText.slice(0, maxWords).join(" ")  + "...";
+                }
+                return text;
+            }
+        })();
+    </script>
+    
+</body>
+</html>

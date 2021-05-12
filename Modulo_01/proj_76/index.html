@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <style>
+        .destaque{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui, repellendus eaque alias voluptatem ipsum, nihil voluptate molestiae laudantium, itaque dolor in ab aspernatur ex delectus fugiat est dignissimos minus!</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio ab nesciunt, earum dicta dignissimos accusantium autem asperiores saepe unde placeat inventore numquam blanditiis molestias fuga expedita corporis. Laborum, libero molestiae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga laudantium iste quos unde dolores distinctio nisi hic facere consectetur, cupiditate cumque ipsam doloremque quo deserunt rerum adipisci dolore.</p>
+
+    <script>
+        (function(){
+
+            var $paragraph = document.querySelectorAll("p");
+
+            for(var x = 0; x < $paragraph.length; x++){
+
+                var temJS = $paragraph[x].textContent.toLocaleLowerCase().indexOf("javascript") >= 0;
+
+                $paragraph[x].className = temJS ? "destaque" : "";
+            }
+        })();
+    </script>
+    
+</body>
+</html>
