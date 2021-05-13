@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        (function(){
+            var currentDate = new Date();
+            currentDate.setHours(0);
+            currentDate.setMinutes(0);
+            currentDate.setSeconds(0);
+            currentDate.setMilliseconds(0);
+
+            var currentYear = currentDate.getFullYear();
+            
+            var birthDate = new Date(currentYear, 0, 6);
+
+            var currentDateTS = currentDate.getTime();
+            var birthDateTS = birthDate.getTime();
+
+            
+            if(birthDateTS === currentDateTS){
+                alert("Feliz aniversario");
+                return;
+            }
+
+            if(birthDateTS < currentDateTS){
+                birthDate.setFullYear(++currentYear);
+                birthDateTS = birthDate.getTime();
+            }
+
+            const oneDayTS = 24 * 60 * 60 * 1000;
+            var difference = birthDateTS - currentDateTS;
+
+            console.log(difference / oneDayTS);
+        })();
+    </script>
+    
+</body>
+</html>
