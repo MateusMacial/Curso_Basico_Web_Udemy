@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <h1>Desafio</h1>
+
+    <script>
+        (function () {
+
+            var currentDate = new Date();
+            var currentYear = currentDate.getFullYear();
+            var currentMonth = currentDate.getMonth() < 10 ? "0" + (currentDate.getMonth() + 1) : (currentDate.getMonth() + 1);
+            var currentDay = currentDate.getDate() < 10 ? "0" + currentDate.getDate() : currentDate.getDate();
+
+            var brStandard = `${currentDay}/${currentMonth}/${currentYear}`;
+
+            console.log(brStandard);
+        })();
+    </script>
+
+</body>
+
+</html>
