@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Eventos browser</h1>
+
+    <script>
+        window.addEventListener("load", function(){
+            console.log("load disparado");
+        });
+        
+        window.addEventListener("resize", function(e){
+            console.log("resize disparado");
+        });
+
+        window.addEventListener("scroll",function(e){
+            console.log("scroll disparado");
+            console.log(e);
+            console.log("scroll Y: ", pageYOffset);
+        });
+
+        window.addEventListener("unload", function(){
+            console.log("unload disparado");
+        });
+
+        window.addEventListener("beforeunload", function(){
+            console.log("beforeunload disparado");
+        })
+    </script>
+    
+</body>
+</html>

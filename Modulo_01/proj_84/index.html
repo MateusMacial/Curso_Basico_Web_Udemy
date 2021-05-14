@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <style>
+        .teste{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedades visuais</h1>
+
+    <div class="teste" style="background: green;">teste qualquer</div>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, perspiciatis unde? Voluptatum nulla nostrum omnis amet. Assumenda impedit excepturi debitis, modi quibusdam aperiam nobis, fugit natus dolore saepe molestiae nulla?</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, repellendus tempora. Aliquam aliquid magnam unde est ab fugit, iure odit, itaque odio ipsum laborum? Consequatur doloremque tempora soluta architecto. Optio?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, repellendus tempora. Aliquam aliquid magnam unde est ab fugit, iure odit, itaque odio ipsum laborum? Consequatur doloremque tempora soluta architecto. Optio?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, repellendus tempora. Aliquam aliquid magnam unde est ab fugit, iure odit, itaque odio ipsum laborum? Consequatur doloremque tempora soluta architecto. Optio?</p>
+
+    <div class="teste2">teste 2</div>
+
+    <script>
+        var $teste = document.querySelector(".teste");
+        console.log("bg: ", $teste.style);
+
+        console.log("computado: ", getComputedStyle($teste).background);
+
+        var $p = document.querySelector("p");
+        //console.log(getComputedStyle($p));
+        console.log($p.offsetHeight, $p.offsetWidth);
+        console.log($p.offsetLeft, $p.offsetTop);
+
+        var $teste2 = document.querySelector(".teste2");
+        console.log($teste2.offsetLeft, $teste2.offsetTop);
+
+        console.log($teste2.getBoundingClientRect());
+    </script>
+    
+</body>
+</html>
