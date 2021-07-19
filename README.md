@@ -1,2 +1,2 @@
-# exercicios_udemy
+# Exercicios do curso da Udemy
  
